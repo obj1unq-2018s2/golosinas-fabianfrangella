@@ -3,8 +3,8 @@ import golosinas.*
 
 describe "tests de mariano y juliana" {
 
-	var golosinasDeseadas = #{ caramelo, bombon, tuttifrutti }
-	var gustosDeseados = #{ 'Frutilla', 'Vainilla', 'Chocolate', 'Naranja' }
+	var golosinasDeseadas = #{ alfajor, bombon, chocolatin, chupetin }
+	var gustosDeseados = #{ "Melón", "Chocolate", "Frutilla", "Vainilla" }
 
 	fixture {
 		mariano.comprar(chocolatin)
@@ -14,11 +14,11 @@ describe "tests de mariano y juliana" {
 	}
 
 	test "golosinas faltantes" {
-		assert.equals(#{ caramelo }, mariano.golosinasFaltantes(golosinasDeseadas))
+		assert.equals(#{ alfajor, chupetin }, mariano.golosinasFaltantes(golosinasDeseadas))
 	}
 
 	test "gustos faltantes" {
-		assert.equals(#{ 'Naranja' }, mariano.gustosFaltantes(gustosDeseados))
+		assert.equals(#{ 'Melón' }, mariano.gustosFaltantes(gustosDeseados))
 	}
 
 }

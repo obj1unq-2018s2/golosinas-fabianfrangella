@@ -117,9 +117,8 @@ object chocolatin {
 
 object golosinaBaniada {
 
-	var golosinaInterior
+	var golosinaInterior 
 	var pesoBanio = 4
-	const property libreGluten = golosinaInterior.libreDeGluten()
 
 	method baniaA(unaGolosina) {
 		golosinaInterior = unaGolosina
@@ -140,6 +139,8 @@ object golosinaBaniada {
 	method gusto() {
 		return golosinaInterior.gusto()
 	}
+	
+	method libreGluten() = golosinaInterior.libreGluten()
 
 }
 
