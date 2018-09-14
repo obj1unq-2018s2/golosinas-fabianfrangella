@@ -117,7 +117,7 @@ object chocolatin {
 
 object golosinaBaniada {
 
-	var golosinaInterior 
+	var golosinaInterior
 	var pesoBanio = 4
 
 	method baniaA(unaGolosina) {
@@ -139,7 +139,7 @@ object golosinaBaniada {
 	method gusto() {
 		return golosinaInterior.gusto()
 	}
-	
+
 	method libreGluten() = golosinaInterior.libreGluten()
 
 }
@@ -155,12 +155,10 @@ object tuttifrutti {
 	method precio() = if (libreGluten) 7 else 10
 
 	method mordisco() {
-		if (cantMordiscos > 2) {
-			cantMordiscos = 1
-		} else {
-			cantMordiscos += 1
-		}
+		cantMordiscos = if (cantMordiscos > 2) 1 else cantMordiscos + 1
 		gusto = if (gusto == 'Naranja') sabores.get(0) else sabores.get(cantMordiscos)
+		// me compliqué demasiado con esto?, no sabia si se buscaba utilizar listas para resolver esto
+		// o con if, else if else alcanzaba
 	}
 
 }
