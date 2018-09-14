@@ -30,6 +30,10 @@ describe "tests de mariano" {
 		assert.equals(4, caramelo.peso())
 		assert.equals(11, bombon.peso())
 	}
-
+	
+	test "golosinas sin TACC"{
+		assert.equals(true,mariano.hayGolosinasSinTACC())
+	}
+		
 }
 

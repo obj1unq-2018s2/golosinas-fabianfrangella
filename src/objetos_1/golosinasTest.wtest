@@ -1,0 +1,39 @@
+import golosinas.*
+
+describe "test golosinas" {
+
+	fixture {
+		chocolatin.pesoInicial(100)
+	}
+
+	test "chocolatin" {
+		assert.equals(50, chocolatin.precio())
+		chocolatin.mordisco()
+		assert.equals(98, chocolatin.peso())
+	}
+
+	test "alfajor" {
+		alfajor.mordisco()
+		assert.equals(240, alfajor.peso())
+	}
+
+	test "tuttifrutti" {
+		assert.equals('Frutilla', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals('Chocolate', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals('Naranja', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals('Frutilla', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals('Chocolate', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals('Naranja', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		assert.equals('Frutilla', tuttifrutti.gusto())
+		tuttifrutti.mordisco()
+		
+	}
+
+}
+
