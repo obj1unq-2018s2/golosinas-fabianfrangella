@@ -149,13 +149,13 @@ object tuttifrutti {
 	var property peso = 5
 	var property libreGluten 
 	const property sabores = [ 'Frutilla', 'Chocolate', 'Naranja' ]
-	var property gusto = sabores.get(0)
+	var property gusto = sabores.first()
 	var cantMordiscos = 0
 
 	method precio() = if (libreGluten) 7 else 10
 
 	method mordisco() {
-		cantMordiscos = if (cantMordiscos >= 2) 0 else cantMordiscos + 1
+		cantMordiscos = if (cantMordiscos >= sabores.size()-1) 0 else cantMordiscos + 1
 		gusto = sabores.get(cantMordiscos)
 	}
 
