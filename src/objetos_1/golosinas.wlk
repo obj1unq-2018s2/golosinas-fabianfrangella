@@ -147,7 +147,7 @@ object golosinaBaniada {
 object tuttifrutti {
 
 	var property peso = 5
-	var property libreGluten
+	var property libreGluten 
 	const property sabores = [ 'Frutilla', 'Chocolate', 'Naranja' ]
 	var property gusto = sabores.get(0)
 	var cantMordiscos = 0
@@ -155,10 +155,8 @@ object tuttifrutti {
 	method precio() = if (libreGluten) 7 else 10
 
 	method mordisco() {
-		cantMordiscos = if (cantMordiscos > 2) 1 else cantMordiscos + 1
-		gusto = if (gusto == 'Naranja') sabores.get(0) else sabores.get(cantMordiscos)
-		// me compliqué demasiado con esto?, no sabia si se buscaba utilizar listas para resolver esto
-		// o con if, else if else alcanzaba
+		cantMordiscos = if (cantMordiscos >= 2) 0 else cantMordiscos + 1
+		gusto = sabores.get(cantMordiscos)
 	}
 
 }
