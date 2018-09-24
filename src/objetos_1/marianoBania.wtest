@@ -1,0 +1,14 @@
+import mariano.*
+import golosinas.*
+
+describe "test de mariano etapa3" {
+
+	var chocolatin = new Chocolatin(pesoInicial = 100, peso = 100)
+
+	test "mariano baña una golosina" {
+		mariano.baniar(chocolatin)
+		
+	}
+
+}
+

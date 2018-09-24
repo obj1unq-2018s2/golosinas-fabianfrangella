@@ -5,6 +5,7 @@ object mariano {
 	// para este objeto no damos pistas
 	// definimos algunos métodos para que compile el test
 	var property golosinas = []
+	var peso
 
 	method comprar(golosina) {
 		golosinas.add(golosina)
@@ -36,6 +37,13 @@ object mariano {
 
 	method gustosFaltantes(gustosDeseados) {
 		return gustosDeseados.difference(self.sabores().asSet())
+	}
+
+	method baniar(unaGolosina) {
+		if (golosinas.contains(unaGolosina)) {
+			golosinas.remove(unaGolosina)
+		}
+		golosinas.add(new GolosinaBaniada(golosinaInterior = unaGolosina))
 	}
 
 }
