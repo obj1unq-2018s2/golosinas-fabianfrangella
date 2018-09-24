@@ -32,7 +32,7 @@ object mariano {
 
 	method pesoGolosinas() = golosinas.sum{ golosina => golosina.peso() }
 
-	method golosinasFaltantes(golosinasDeseadas) = golosinasDeseadas.difference(golosinas.asSet())
+	method golosinasFaltantes(golosinasDeseadas) = golosinasDeseadas.difference(golosinas)
 
 	method gustosFaltantes(gustosDeseados) {
 		return gustosDeseados.difference(self.sabores().asSet())
