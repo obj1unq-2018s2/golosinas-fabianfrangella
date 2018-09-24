@@ -3,11 +3,17 @@ import mariano.*
 
 describe "tests de mariano" {
 
+	var chocolatin = new Chocolatin()
+	var caramelo = new Caramelo()
+	var bombon = new Bombon()
+	var chupetin = new Chupetin()
+
 	fixture {
 		chocolatin.pesoInicial(100)
 		mariano.comprar(chocolatin)
 		mariano.comprar(caramelo)
 		mariano.comprar(bombon)
+		
 	}
 
 	test "test comprar" {
@@ -30,10 +36,10 @@ describe "tests de mariano" {
 		assert.equals(4, caramelo.peso())
 		assert.equals(11, bombon.peso())
 	}
-	
-	test "golosinas sin TACC"{
-		assert.equals(true,mariano.hayGolosinasSinTACC())
+
+	test "golosinas sin TACC" {
+		assert.equals(true, mariano.hayGolosinasSinTACC())
 	}
-		
+
 }
 

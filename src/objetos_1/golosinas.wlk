@@ -1,4 +1,4 @@
-object bombon {
+class Bombon {
 
 	var peso = 15
 
@@ -24,7 +24,7 @@ object bombon {
 
 }
 
-object alfajor {
+class Alfajor {
 
 	var property peso = 300
 	const property libreGluten = false
@@ -39,7 +39,7 @@ object alfajor {
 
 }
 
-object caramelo {
+class Caramelo {
 
 	var property peso = 5
 	var property libreGluten = true
@@ -54,7 +54,7 @@ object caramelo {
 
 }
 
-object chupetin {
+class Chupetin {
 
 	var property peso = 7
 	const property libreGluten = true
@@ -71,7 +71,7 @@ object chupetin {
 
 }
 
-object oblea {
+class Oblea {
 
 	var property peso = 250
 	const property libreGluten = false
@@ -90,7 +90,7 @@ object oblea {
 
 }
 
-object chocolatin {
+class Chocolatin {
 
 	// hay que acordarse de *dos* cosas, el peso inicial y el peso actual
 	// el precio se calcula a partir del precio inicial
@@ -115,7 +115,7 @@ object chocolatin {
 
 }
 
-object golosinaBaniada {
+class GolosinaBaniada {
 
 	var golosinaInterior
 	var pesoBanio = 4
@@ -144,10 +144,10 @@ object golosinaBaniada {
 
 }
 
-object tuttifrutti {
+class Tuttifrutti {
 
 	var property peso = 5
-	var property libreGluten 
+	var property libreGluten
 	const property sabores = [ 'Frutilla', 'Chocolate', 'Naranja' ]
 	var property gusto = sabores.first()
 	var cantMordiscos = 0
@@ -155,7 +155,7 @@ object tuttifrutti {
 	method precio() = if (libreGluten) 7 else 10
 
 	method mordisco() {
-		cantMordiscos = if (cantMordiscos >= sabores.size()-1) 0 else cantMordiscos + 1
+		cantMordiscos = if (cantMordiscos >= sabores.size() - 1) 0 else cantMordiscos + 1
 		gusto = sabores.get(cantMordiscos)
 	}
 

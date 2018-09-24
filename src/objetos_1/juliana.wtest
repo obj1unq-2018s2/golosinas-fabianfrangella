@@ -3,6 +3,12 @@ import golosinas.*
 
 describe "tests de mariano y juliana" {
 
+	var chocolatin = new Chocolatin()
+	var bombon = new Bombon()
+	var chupetin = new Chupetin()
+	var tuttifrutti = new Tuttifrutti()
+	var oblea = new Oblea()
+	var alfajor = new Alfajor()
 	var golosinasDeseadas = #{ alfajor, bombon, chocolatin, chupetin }
 	var gustosDeseados = #{ "Melón", "Chocolate", "Frutilla", "Vainilla" }
 
@@ -14,7 +20,7 @@ describe "tests de mariano y juliana" {
 	}
 
 	test "golosinas faltantes" {
-		assert.equals(#{ alfajor, chupetin }, mariano.golosinasFaltantes(golosinasDeseadas))
+		assert.that(mariano.golosinasFaltantes(golosinasDeseadas) == #{ alfajor, chupetin })
 	}
 
 	test "gustos faltantes" {
